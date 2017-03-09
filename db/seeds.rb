@@ -8,5 +8,10 @@
 
 
 2.times do
-  product = Product.new(name: Faker::App.name, price: Faker::Number.between(1, 1000), image: Faker::Internet.domain_name, description: Faker::Lorem.sentence)
+  product = Product.create(
+    name: Faker::App.name, 
+    price: Faker::Number.between(1, 1000), 
+    image: Faker::Internet.domain_name, 
+    description: Faker::Lorem.sentence
+  )
 end
