@@ -1,8 +1,14 @@
 class ProductsController < ApplicationController
   
-  def products_page
+  def index
     @products = Product.all
-    render "products_page.html.erb"
+    render "index.html.erb"
   end
 
+  def show
+    product_id = params[:id]
+    @product = Product.find_by(id: product_id)
+#   @recipe = Recipe.find_by(id: params[:id]) - another way to show the above.
+    render "show.html.erb"
+  end
 end

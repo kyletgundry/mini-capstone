@@ -1,0 +1,19 @@
+<h1>Here are all your products:</h1>
+  <% @products.each do |product| %>
+
+    <h2>Product Name:</h2>
+    <p><a href="/products/<%= product.id %>"><%= product.name %></a></p>
+
+    <h2>Product Price:</h2>
+    <p><%= product.price %></p>
+
+    <h2>Phone Image:</h2>
+    <p><%= product.image %></p>
+
+    <h2>Phone Description:</h2>
+    <p><%= product.description %></p>
+
+    <p>----------------------------------------------------</p>
+
+
+  <% end %>
