@@ -1,0 +1,18 @@
+<h1>New Product:</h1>
+<%= form_tag "/products", method: :post do %>
+<div class="form-group">
+  Product Name: <input type="text" name="name">
+</div>
+<div class="form-group">
+  Price: <input type="text" name="price">
+</div>
+<div class="form-group">
+  Image: <input type="text" name="image">
+</div>
+<div class="form-group">
+  Description: <input type="text" name="description">
+</div>
+<input class="btn btn-primary" class="form-control" type="submit" value="Create Product">
+<% end %>
+
+<a class="btn btn-primary" href="/products">Cancel</a>
