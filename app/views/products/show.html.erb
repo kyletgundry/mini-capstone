@@ -11,4 +11,8 @@
 
 <p><a class="btn btn-primary" href="/products/<%= @product.id %>/edit">Update Product</a></p>
 
+<%= form_tag "/recipes/#{@product.id}", method: :delete do %>
+<input type="submit" value="Delete Product">
+<% end %>
+
 <p><a class="btn btn-primary" href="/products">Back to all Products</a></p>
