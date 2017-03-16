@@ -1,24 +1,22 @@
 <h1>Here are all your products:</h1>
+<p></p>
+<a class="btn btn-default" href="/products/new">Create New Product</a>
+<p></p>
   <% @products.each do |product| %>
-
-    <h2>Product Name:</h2>
+    <div class="well">
+    <h4>Name:</h4>
     <p><a href="/products/<%= product.id %>"><%= product.name %></a></p>
 
-    <h2>Product Price:</h2>
+    <h4>Price:</h4>
     <p><%= product.price %></p>
 
-    <h2>Phone Image:</h2>
+    <h4>Image:</h4>
     <p><%= product.image %></p>
 
-    <h2>Phone Description:</h2>
+    <h4>Description:</h4>
     <p><%= product.description %></p>
 
-    <p><a class="btn btn-primary" href="/products/<%= product.id %>/edit">Update Product</a></p>
-
-
+    <p><a class="btn btn-default" href="/products/<%= product.id %>/edit">Update Product</a></p>
     <p>----------------------------------------------------</p>
-
-
+    </div>
   <% end %>
-
-  <p><a class="btn btn-primary" href="/products/new">Create New Product</a></p>
